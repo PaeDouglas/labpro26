@@ -29,5 +29,17 @@ def q6():
     print(f' O sucessor de:[num] é {num+1}')
 #q6()
 
-def q7():
+def q7(): 
+    nome = input('Digite seu nome: '). title().strip()
+    endereço = input('Digite seu endereço: ') 
+    telefone = input('digite seu telefone: ') 
+    print(f'\nNome: {nome}\nEndereço: {endereço}/nTelefone: {telefone}')
+#q7()
+def q8():
+    num1 = int(input('digite o primeiro numero: '))
+    num2 = int(input(' digite o segundo numero: '))
+    print (f'\nSubtração de {num1} e {num2}; [num1 - num2}') 
+#q8()
+def q9():
+    
     
