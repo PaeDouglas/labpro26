@@ -1,3 +1,5 @@
+import math
+
 def q1():
     print('douglas')
 
@@ -78,8 +80,8 @@ def q11():
 
 def q12():
     num = float(input('digite um numero real: '))
-    print(f' o quadrado de{num:.2F} = {num*NUM}')#não reco9mendado 
-    print(f'math.pow({num},2) = [math.pow(num,2)}') #para float este é indicado
+    print(f' o quadrado de{num:.2F} = {num*num}')#não reco9mendado 
+    print(f'math.pow({num},2) = {math.pow(num,2)}') #para float este é indicado
     print(f'{num}**2 = {num**2}')# recomendado para int
 
 
@@ -94,16 +96,22 @@ def q13():
 def q14():
     base = float(input('digite a base doretangulo: '))
     altura = float (input ('digite a altura do triangulo')) 
-    print9f'perimetro = {base*2 +altura*2}')
+    print(f'perimetro = {base*2 +altura*2}')
     print(f'area: { base*altura}')
 
 def q15():
     valor = round(float(input('valor do produto: R$ ')),2)
-    desconto desejado = float(input(' % do desconto desejado: '))
+    desconto_desejado = float(input(' % do desconto desejado: '))
     valor_desconto = valor*desconto_desejado/100
     print(f' valor do descontop: R${valor_desconto}')
     print(f'valor final do produto: R$ {valor-valor_desconto}')
 
+def q16():
+    salario_atual = float(input('informe o valor do salario: '))
+    percentual_reajuste = float(input('informe o percentual de reajuste: '))
+    novo_salario = salario_atual + (salario_atual*(percentual_reajuste/100))
+    print(f'')
+
 
 questao = input('digite a questão a ser executada: ')
-eval(f'q{q}()') # eval transforma iam string (texto em comando python)
+eval(f'q{questao}()') # eval transforma iam string (texto em comando python)
