@@ -1,5 +1,38 @@
 import math
 
+def exemploSE():
+    idade = 18
+    if idade == 18: # se idade for igual a 18
+    print('possui 18 anos')
+    else:
+        print(' nao possui 18 anos')
+
+def exemplo SESENAO():
+    idade=60
+
+if idade >= 18: # se idade for maior ou igual a 18
+    print('maior de idade')
+elif idade  >= 60: # senao se a idade for maior ou igual a 60
+    print('melhor idade')
+else: 
+    print('menor idade')
+
+
+def exemploCaso():
+    estado_civil = 'S'
+    match(estado_civil):
+        case 's':
+        print('solteiro')
+        case 'C':
+        print('casado')
+        case '_':
+        print(desconhecido)
+
+
+
+
+
+
 def q1():
     print('douglas')
 
@@ -12,24 +45,36 @@ def q3():
     media = soma/3
     print(f'(5+8+12)/3 ={media}')
 
-
 def q4():
+    try:
+        numero =  int(input('digite um numero: '))
+        print(f'voce digitou: {numero}')
+    except ValueError:
+        print('o valor digitado é invalido! digite apenas valores inteiros. tente novamente ') 
+    except:
+        print(' erro desconhecido! ')
+
     num = int(input('digite um numero: '))
     print(num)
 
-
 def q5():
-    num1 = float(input('digite um numero: '))
-    num2 = float(input('digite um numero: '))
-    print(num1)
-    print(num2)
+    try:
+        num1 = float(input('digite um numero: '))
+        num2 = float(input('digite um numero: '))
+        print(num1)
+        print(num2)
 
+    except ValueError:
+        print('error ')
 
 
 def q6():
-    num = int(input('digite um numero inteiro: '))
-    print(f' O antecessor de:{num} é {num-1}')
-    print(f' O sucessor de:[num] é {num+1}')
+    try:
+        num = int(input('digite um numero inteiro: '))
+        print(f' O antecessor de:{num} é {num-1}')
+        print(f' O sucessor de:[num] é {num+1}')
+    except ValueError:
+        print(' error')    
 
 
 
@@ -115,3 +160,12 @@ def q16():
 
 questao = input('digite a questão a ser executada: ')
 eval(f'q{questao}()') # eval transforma iam string (texto em comando python)
+
+try:
+
+    opcao = int(input('Digite o número da questão: '))
+    if opcao < 1 or opcao > 25:
+        raise exception('questao invalida, escolha de 1 a 25')
+    eval    
+    eval(f'q{opcao}()')
+
