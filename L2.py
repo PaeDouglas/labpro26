@@ -1,3 +1,6 @@
+from datetime import datetime
+#datetime.now()
+
 def q1():
     num1 = int(input('digite um numero'))
     num2 = int(input('digite um numero'))
@@ -47,22 +50,50 @@ def q6():
 def q7():
     num1 = int(input('digite qualquer numero: '))
     if num1 >= 20 and <= 50
-        print (f'o numero esta contido entre 20 e 50 ')
-    else: print (f"o numero não esta contido entre 20 e 50")
+        print (f'{num1} O numero esta contido entre 20 e 50 ')
+   # else: print (f"o numero não esta contido entre 20 e 50")
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
 def q8():
-    num1 = int(input('digite qualquer numero: '))
-    if num1 >20 and <20 and <=20
-        print (f'maior do que 20')
-
+num1 = int(input('digite qualquer numero: '))
+    if num1 >= 20 and < 20
+        print (f'{num1} é maior ou igual a 20 ')
+    else: print (f'{num1} é menor que 20 ')  
+    
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q9():
+    try
+    ano_de_nascimento = int(input("digite o ano de nascimento"))
+    #ano_atual = datetime.now().year
+    ano_atual = int(input('digite o ano atual'))
+    idade=(ano_de_nascimento - ano_atual)
+     print (f' a idade é: ')
+     except ValueError:
+     print('digite apenas o ano ')
+
+#nascimento = int(input(' ano de nascimento; '))
+#if 1900<= nascimento <= datetime.now().year
+#idade = datetime.now().year - nascimento 
+#print (f'a pessoa tem {idade} naos !')
+#else:
+#print ('ano de nascimento invalido! ')
+
+
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def q10():
+    num1 = ('primeiro numero; ')
+    num2 = ('segundo numero; ')
+    num3 = ('terceiro numero; ')
+    if (num1 <)
+
+
+
+
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 
