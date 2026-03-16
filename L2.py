@@ -1,4 +1,6 @@
+import random
 from datetime import datetime
+from util impot inputint, inputfloat
 #datetime.now()
 
 def q1():
@@ -86,16 +88,29 @@ def q9():
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
 def q10():
-    num1 = ('primeiro numero; ')
-    num2 = ('segundo numero; ')
-    num3 = ('terceiro numero; ')
-    if (num1 <)
-
-
-
+    a = inputint('digite um numero inteiro')
+    b = inputint('digite um numero inteiro')
+    c = inputint('digite um numero inteiro')
+    resultado =''
+    resultado += f'{a} {b} {c}' if  a<b<c else ""
+    resultado += f'{a} {b} {c}' if  a<c<b else ""
+    resultado += f'{a} {b} {c}' if  b<a<c else ""
+    resultado += f'{a} {b} {c}' if  b<c<a else ""
+    resultado += f'{a} {b} {c}' if  c<a<b else ""
+    resultado += f'{a} {b} {c}' if  c<b<a else ""
+    print(resultado)
 
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+ def q11():
+    maior = inputint('digite um numero inteiro:')
+    numero = inputint('digite um segundo numero:')
+    if numero > maior:
+        maior = numero
+    numero = inputint('digite um terceiro numero:')
+    if numero > maior:
+        maior = numero
+    print(f'o maior numero informado é {maior}')
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
