@@ -116,12 +116,26 @@ def q10():
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+def q12():
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+def 13(): 
+    nome = inputint('degite seu nome: ')
+    p1 = inputint('digite a nota da p1')
+    p2 = inputint(' digite a nota da p2')
+    media = (p1 + p2)/2
+    if media >= 7
+    print (f'aprovado: ')
+    else media<7 
+    print (f'reprovado: ')
+
+
+    
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
