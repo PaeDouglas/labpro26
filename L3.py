@@ -1,3 +1,8 @@
+import random
+from datetime import datetime
+from util impot inputint, inputfloat, gerar_palavra
+
+
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
