@@ -2,7 +2,12 @@ import random
 from datetime import datetime
 from util impot inputint, inputfloat, gerar_palavra
 
+def input_int(msg):
+    return int(input(msg))
 
+def input_float(msg):
+    return float(input(msg))
+    
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
