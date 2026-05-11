@@ -1,0 +1,58 @@
+Essas funções são excelentes para manter o seu código principal limpo! Elas resolvem aquele problema clássico de o programa "quebrar" porque o usuário digitou uma letra onde deveria ser um número.
+
+No entanto, notei um detalhe importante: a sua função inputint está bem robusta com o loop while, mas a inputfloat vai encerrar (ou retornar -1) na primeira tentativa inválida.
+
+Aqui estão algumas sugestões para padronizar e melhorar a segurança do seu código:
+
+1. Ajuste na inputfloat
+Para que ela funcione como a inputint, ela também precisa de um loop while. Além disso, retornar -1 em caso de erro pode ser confuso, pois o usuário pode realmente querer digitar -1. O ideal é só sair da função quando o valor for válido.
+
+2. Validação de Tipos de min e max
+Na inputint, você verifica se min e max são inteiros. Isso é preventivo, mas geralmente esses limites são definidos pelo programador. Se você quiser manter essa segurança, pode simplificar a lógica.
+
+Sugestão de Refatoração
+Aqui está uma versão otimizada das suas funções para você integrar ao seu arquivo de exercícios:
+
+Python
+def inputint(msg="Digite um valor inteiro: ", min=None, max=None):
+    while True:
+        try:
+            valor = int(input(msg))
+            if min is not None and valor < min:
+                print(f'ERRO: O valor deve ser no mínimo {min}')
+                continue
+            if max is not None and valor > max:
+                print(f'ERRO: O valor deve ser no máximo {max}')
+                continue
+            return valor
+        except ValueError:
+            print('ERRO: Valor informado não é um número inteiro!')
+
+def inputfloat(msg="Digite um número real: ", min=None, max=None):
+    while True:
+        try:
+            valor = float(input(msg))
+            if min is not None and valor < min:
+                print(f'ERRO: O valor deve ser no mínimo {min}')
+                continue
+            if max is not None and valor > max:
+                print(f'ERRO: O valor deve ser no máximo {max}')
+                continue
+            return valor
+        except ValueError:
+            print('ERRO: Valor informado não é um número real!')
+O que mudou?
+Loop Infinito (while True): Agora a inputfloat também insiste até o usuário acertar, igual à sua inputint.
+
+Remoção do return -1: Agora a função só retorna quando o dado está validado.
+
+Uso de continue: Em vez de aninhar vários if/else, o continue joga o código de volta para o início do loop se algo estiver errado, deixando o fluxo mais limpo.
+
+Verificação de None: Usei is not None em vez de != None, que é a convenção recomendada pelo guia de estilo do Python (PEP 8).
+
+Dica de ouro: Você pode usar essas funções para substituir os int(input()) daquela lista de exercícios que você postou antes. Por exemplo, na questão da reserva de mesas:
+
+Python
+# Em vez de: cod = int(input("Código da mesa..."))
+cod = inputint("Código da mesa (1-30) ou 0 p/ sair: ", min=0, max=30)
+Isso impede que o usuário tente reservar a mesa 50 ou a mesa -5! O que achou dessa abordagem mais padronizada?
